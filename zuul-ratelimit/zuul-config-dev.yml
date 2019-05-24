@@ -22,7 +22,7 @@ zuul:
   routes:
     order-service:
       path: /order/**
-      serviceId: order-service
+      serviceId: service-order
   ratelimit:
     key-prefix: ratelimit
     enabled: true
