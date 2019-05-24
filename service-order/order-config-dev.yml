@@ -1,25 +1,12 @@
 spring:
   application:
     name: service-order
-  redis:
-    database: 9
-    host: cache-dev.riverroad.cn
-    password: hhxxttxs!
-    port: 8379
-    timeout: 5000
-    pool:
-      max-active: 50
-      max-idle: 20
-      min-idle: 10
-      max-wait: 3000
-
 eureka:
   instance:
     hostname: 127.0.0.1
     prefer-ip-address: false
     instance-id: http://${eureka.instance.hostname}:${server.port}
     ip-address: ${eureka.instance.hostname}
-
 ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 3000

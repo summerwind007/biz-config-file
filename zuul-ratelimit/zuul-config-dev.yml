@@ -1,6 +1,17 @@
 spring:
   application:
     name: zuul-ratelimit
+  redis:
+    database: 9
+    host: cache-dev.riverroad.cn
+    password: hhxxttxs!
+    port: 8379
+    timeout: 5000
+    pool:
+      max-active: 50
+      max-idle: 20
+      min-idle: 10
+      max-wait: 3000
 eureka:
   instance:
     hostname: 127.0.0.1
@@ -20,7 +31,7 @@ zuul:
     default-policy:
       limit: 2
       quota: 1
-      refresh-interval: 3
+      refresh-interval: 30
 ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 3000
